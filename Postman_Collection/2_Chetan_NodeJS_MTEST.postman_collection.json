@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "846b1d0c-1481-4544-a6b1-1a0f06a42378",
+		"name": "2_Chetan_NodeJS_MTEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31244269",
+		"_collection_link": "https://nextflat-2194.postman.co/workspace/Nextflat-API-Collection~4d33c4d6-8e26-45c0-857f-737e336591a9/collection/31244269-846b1d0c-1481-4544-a6b1-1a0f06a42378?action=share&source=collection_link&creator=31244269"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"firstName\":\"Chetan\",\r\n     \"lastName\":\"Pawar\",\r\n     \"email\":\"chetan@yopmail.com\",\r\n     \"password\":\"123456\",\r\n     \"role\":\"admin\" \r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJjaGV0YW50ZXN0QGdtYWlsLmNvbSAiLCJpYXQiOjE3MTM0NDgyNTQsImV4cCI6MTcxMzQ0ODMxNH0.jDZsOQGKgSHZxKAaj5AF-3-T0SuYQsMWPS6JyGH-5E4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n     \"email\":\"chetan@yopmail.com\",\r\n     \"password\":\"123456\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
